@@ -10,7 +10,8 @@ public class GameObjectFactory : IGameObjectFactory
         switch (type)
         {
             case (int) GameObjectType.Player:
-                newObj = obj.ToObject<Player>();
+                // newObj = obj.ToObject<Player>();
+                newObj = Player.Instance;
                 break;
             case (int) GameObjectType.Obstacle:
                 newObj = obj.ToObject<Obstacle>();

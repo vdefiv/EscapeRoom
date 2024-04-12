@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\game\\game.csproj": {}
+    "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\game\\game.csproj": {
+    "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\game\\game.csproj",
+        "projectUniqueName": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj",
         "projectName": "game",
-        "projectPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\game\\game.csproj",
-        "packagesPath": "C:\\Users\\A200002851\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\game\\obj\\",
+        "projectPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj",
+        "packagesPath": "C:\\Users\\hesha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\A200002851\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hesha\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj": {
-                "projectPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj"
+              "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj": {
+                "projectPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj"
               }
             }
           }
@@ -66,17 +66,17 @@
         }
       }
     },
-    "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj": {
+    "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj",
+        "projectUniqueName": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj",
         "projectName": "libs",
-        "projectPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj",
-        "packagesPath": "C:\\Users\\A200002851\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\obj\\",
+        "projectPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj",
+        "packagesPath": "C:\\Users\\hesha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\A200002851\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hesha\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
