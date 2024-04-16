@@ -16,8 +16,14 @@ public class Box : GameObject {
     
 
     public override void Move(int dx, int dy) {
+        bool touched = false;
         int  goToX = PosX +dx;
         int  goToY = PosY +dy;
+        
+        this.SetPrevPosY(this.PosY);
+        this.SetPrevPosX(this.PosX);
+        this.PosX += dx;
+        this.PosY += dy;
         
         // Type type = map.Get(PosX +dx, PosY +dy).GetType();
         GameObject? PotentialTarget = map.Get(goToY, goToX);
@@ -49,9 +55,5 @@ public class Box : GameObject {
         }
         }
 
-        this.SetPrevPosY(this.PosY);
-        this.SetPrevPosX(this.PosX);
-        this.PosX += dx;
-        this.PosY += dy;
     }
 }
