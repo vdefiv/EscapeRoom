@@ -209,12 +209,14 @@
       "PosX": 0,
       "PosY": 0
     },
+
     {
-      "Type": 0,
-      "Color": 5,
-      "PosX": 2,
-      "PosY": 1
-    },{
+      "Type": 1,
+      "Color": 3,
+      "PosX": 5,
+      "PosY": 6
+    },
+    {
       "Type": 0,
       "Color": 5,
       "PosX": 3,

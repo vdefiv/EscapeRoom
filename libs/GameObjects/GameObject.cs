@@ -55,12 +55,26 @@ public class GameObject : IGameObject, IMovement
     }
 
     public int GetPrevPosY() {
+        if(_prevPosY == null || _prevPosY == 0){
+            return _posY;
+        }
         return _prevPosY;
     }
     
     public int GetPrevPosX() {
+         if(_prevPosX == null || _prevPosX == 0){
+            return _posX;
+        }
         return _prevPosX;
     }
+    public void SetPrevPosY(int value) {
+        _prevPosY = value;
+    }
+
+    public void SetPrevPosX(int value) {
+        _prevPosX = value;
+    }
+  
 
     public virtual void Move(int dx, int dy) {
         _prevPosX = _posX;

@@ -12,6 +12,8 @@ public class GameObjectFactory : IGameObjectFactory
             case (int) GameObjectType.Player:
                 // newObj = obj.ToObject<Player>();
                 newObj = Player.Instance;
+                newObj.PosX = obj.PosX;
+                newObj.PosY = obj.PosY;
                 break;
             case (int) GameObjectType.Obstacle:
                 newObj = obj.ToObject<Obstacle>();

@@ -19,12 +19,39 @@ public class Player : GameObject {
             }
             return instance;
         }
+
+        set{}
     }
 
     public override void Move(int dx, int dy) {
-        if(map.Get(PosX + dx, PosY + dy).GetType() == typeof(Obstacle)) {
-            Console.WriteLine("Player created, map" + map.Get(0, 0).GetType());
+        int  goToX = PosX +dx;
+        int  goToY = PosY +dy;
+        
+        // Type type = map.Get(PosX +dx, PosY +dy).GetType();
+        GameObject? PotentialBox = map.Get(goToY, goToX);
+
+        // GameObject nextType = map.Get(PosX + dx, PosY + dy).GetType();
+        if(PotentialBox.Type == GameObjectType.Obstacle) return; 
+        
+        
+        if(PotentialBox.Type == GameObjectType.Box){
+            GameObject? NextObject= map.Get(goToY +dy, goToX +dx);
+            Console.WriteLine ("touched the box)");
+            if(NextObject.Type == GameObjectType.Obstacle
+            || NextObject.Type == GameObjectType.Box) return;
+
+            PotentialBox.Move(dx,dy);
+            PotentialBox.Color = ConsoleColor.Red;
+
+
         }
+
+        this.SetPrevPosY(this.PosY);
+        this.SetPrevPosX(this.PosX);
+        this.PosX += dx;
+        this.PosY += dy;
+        
+       
         // Console.WriteLine("Player created, map" + map.Get(0, 0).GetType());
 
     }
