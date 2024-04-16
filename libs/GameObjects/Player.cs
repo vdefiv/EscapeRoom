@@ -35,7 +35,7 @@ public class Player : GameObject {
         if(PotentialBox.Type == GameObjectType.Box){
 
             GameObject? NextObject= map.Get(goToY +dy, goToX +dx);
-            Console.WriteLine ("touched the box)");
+            Console.WriteLine ("touched the box");
 
             if(NextObject.Type == GameObjectType.Obstacle|| NextObject.Type == GameObjectType.Box) return;
 
