@@ -1,7 +1,11 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\game.csproj": {}
+=======
+    "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj": {}
+>>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
   },
   "projects": {
     "C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\game.csproj": {
@@ -14,7 +18,11 @@
         "outputPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\mila2\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "C:\\Users\\hesha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +34,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj": {
                 "projectPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj"
+=======
+              "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj": {
+                "projectPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj"
+>>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
               }
             }
           }
@@ -66,7 +79,11 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj": {
+=======
+    "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj": {
+>>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj",
@@ -76,7 +93,11 @@
         "outputPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\mila2\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "C:\\Users\\hesha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
         ],
         "originalTargetFrameworks": [
           "net8.0"
