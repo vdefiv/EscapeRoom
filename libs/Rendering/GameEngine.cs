@@ -60,7 +60,7 @@ public sealed class GameEngine
         map.MapWidth = gameData.map.width;
         map.MapHeight = gameData.map.height;
 
-        foreach (var gameObject in gameData.gameObjects)
+        foreach (var gameObject in gameData.First.gameObjects)
         {
             AddGameObject(CreateGameObject(gameObject));
         }
