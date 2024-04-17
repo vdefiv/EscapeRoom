@@ -49,3 +49,16 @@ C:\Users\mila2\Downloads\SokobanGame\libs\bin\Debug\net8.0\libs.deps.json
 C:\Users\mila2\Downloads\SokobanGame\libs\bin\Debug\net8.0\libs.dll
 C:\Users\mila2\Downloads\SokobanGame\libs\bin\Debug\net8.0\libs.pdb
 C:\Users\mila2\Downloads\SokobanGame\libs\obj\Debug\net8.0\ref\libs.dll
+F:\FH\C#\GroupGame\SokobanGame\libs\bin\Debug\net8.0\libs.deps.json
+F:\FH\C#\GroupGame\SokobanGame\libs\bin\Debug\net8.0\libs.dll
+F:\FH\C#\GroupGame\SokobanGame\libs\bin\Debug\net8.0\libs.pdb
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.sourcelink.json
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.dll
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\refint\libs.dll
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\libs.pdb
+F:\FH\C#\GroupGame\SokobanGame\libs\obj\Debug\net8.0\ref\libs.dll

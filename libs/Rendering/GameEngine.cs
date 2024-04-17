@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 public sealed class GameEngine
 {
     private static GameEngine? _instance;
-    private IGameObjectFactory gameObjectFactory;
+    public IGameObjectFactory gameObjectFactory;
 
     public static GameEngine Instance {
         get{
@@ -86,9 +86,16 @@ public sealed class GameEngine
         return gameObjectFactory.CreateGameObject(obj);
     }
 
-    public void AddGameObject(GameObject gameObject){
-        gameObjects.Add(gameObject);
+    public void AddGameObject(GameObject gameObject)
+{
+    if (gameObject.Type == GameObjectType.Box)
+    {
+        int currentAmountOfBoxes = gameObjectFactory.AmountOfBoxes;
+        currentAmountOfBoxes++;
+        ((GameObjectFactory)gameObjectFactory).SetAmountOfBoxes(currentAmountOfBoxes);
     }
+    gameObjects.Add(gameObject);
+}
 
     private void PlaceGameObjects(){
         

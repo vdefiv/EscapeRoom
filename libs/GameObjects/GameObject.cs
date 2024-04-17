@@ -13,6 +13,7 @@ public class GameObject : IGameObject, IMovement
 
     public GameObjectType Type;
 
+    
     public GameObject() {
         this._posX = 5;
         this._posY = 5;
