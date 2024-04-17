@@ -55,31 +55,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\mila2\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\hesha\\.nuget\\packages\\": {}
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj",
-=======
-      "projectUniqueName": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj",
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
       "projectName": "libs",
       "projectPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj",
       "packagesPath": "C:\\Users\\mila2\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\mila2\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-        "C:\\Users\\hesha\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
       ],
       "originalTargetFrameworks": [
         "net8.0"

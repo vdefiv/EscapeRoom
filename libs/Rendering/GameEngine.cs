@@ -47,10 +47,6 @@ public sealed class GameEngine
         return _focusedObject;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
     public bool endGame(){
         if(AmountOfBoxes == 0){
             return false;
@@ -60,13 +56,6 @@ public sealed class GameEngine
     }
 
     public void Setup(){
-<<<<<<< HEAD
-=======
-    public void Setup()
-    {
->>>>>>> 1de581a6a56574c1718e8649aa3b64e514db7d13
-=======
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
 
         //Added for proper display of game characters
         Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -81,31 +70,18 @@ public sealed class GameEngine
             AddGameObject(CreateGameObject(gameObject));
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // AmountOfBoxes = gameObjectFactory.GetAmountOfBoxes;
-        
-=======
->>>>>>> 1de581a6a56574c1718e8649aa3b64e514db7d13
-=======
-        // AmountOfBoxes = gameObjectFactory.GetAmountOfBoxes;
-        
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
         _focusedObject = gameObjects.OfType<Player>().First();
 
     }
 
     public void Render()
     {
-
         //Clean the map
         Console.Clear();
-        Console.WriteLine("yo mama");
+        Console.WriteLine("Level name.");
         map.Initialize();
 
         PlaceGameObjects();
-
-        map.saveMap();
 
         //Render the map
         for (int i = 0; i < map.MapHeight; i++)
@@ -115,6 +91,14 @@ public sealed class GameEngine
                 DrawObject(map.Get(i, j));
             }
             Console.WriteLine();
+        }
+    }
+
+    public void Undo() {
+        // Only step back possible
+        foreach (var gameObject in gameObjects){
+            gameObject.PosX = gameObject.GetPrevPosX();
+            gameObject.PosY = gameObject.GetPrevPosY();
         }
     }
 
@@ -128,33 +112,13 @@ public sealed class GameEngine
 {
     if (gameObject.Type == GameObjectType.Box)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
-        // int currentAmountOfBoxes = gameObjectFactory.AmountOfBoxes;
-        // currentAmountOfBoxes++;
-        // ((GameObjectFactory)gameObjectFactory).SetAmountOfBoxes(currentAmountOfBoxes);
         AmountOfBoxes++;
-<<<<<<< HEAD
-=======
-        if (gameObject.Type == GameObjectType.Box)
-        {
-            int currentAmountOfBoxes = gameObjectFactory.AmountOfBoxes;
-            currentAmountOfBoxes++;
-            ((GameObjectFactory)gameObjectFactory).SetAmountOfBoxes(currentAmountOfBoxes);
-        }
-        gameObjects.Add(gameObject);
->>>>>>> 1de581a6a56574c1718e8649aa3b64e514db7d13
-=======
->>>>>>> ae95ec621bfd996e8bdde99a836afd2f2fdf74c4
     }
     gameObjects.Add(gameObject);
 }
 
     private void PlaceGameObjects()
     {
-
         gameObjects.ForEach(delegate (GameObject obj)
         {
             map.Set(obj);
@@ -163,7 +127,6 @@ public sealed class GameEngine
 
     private void DrawObject(GameObject gameObject)
     {
-
         Console.ResetColor();
 
         if (gameObject != null)

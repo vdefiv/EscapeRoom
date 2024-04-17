@@ -30,7 +30,11 @@ public class Map {
     public void saveMap(){
         for (int x = 0; x < _mapWidth; x++){
             for (int y = 0; y < _mapHeight; y++){
-                mapArray[x, y] = Get(y, x);
+                GameObject? curr = Get(y, x);
+
+                // curr.PosX = curr.GetPrevPosX();
+                // curr.PosY = curr.GetPrevPosY();
+                mapArray[x, y] = curr;
             }
         }
     }

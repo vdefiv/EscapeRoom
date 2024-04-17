@@ -40,14 +40,18 @@ public sealed class InputHandler{
                 case ConsoleKey.RightArrow:
                     focusedObject.Move(1, 0);
                     break;
-                // Adding the button for rewinding
-                // case ConsoleKey.Z:
-                //     focusedObject.
+                case ConsoleKey.Z:
+                    engine.Undo();
+                    break;
+                // Adding the button for next level
+                // case ConsoleKey.Enter:
+                //     --Function for switching to next level
+                //     break;
                 default:
                     break;
             }
+            
         }
         
     }
-
 }
