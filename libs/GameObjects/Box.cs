@@ -31,10 +31,8 @@ public class Box : GameObject {
         GameObject? PotentialTarget = map.Get(goToY, goToX);
         
         if(PotentialTarget.Type == GameObjectType.Target){
-
             Console.WriteLine ("touched the target");
             engine.AmountOfBoxes--;
-
         }
 
     }

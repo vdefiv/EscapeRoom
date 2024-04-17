@@ -66,7 +66,6 @@ public sealed class GameEngine
         map.MapHeight = gameData.map.height;
 
         foreach (var gameObject in gameData.First.gameObjects)
-        foreach (var gameObject in gameData.First.gameObjects)
         {
             AddGameObject(CreateGameObject(gameObject));
         }
@@ -82,7 +81,7 @@ public sealed class GameEngine
 
         //Clean the map
         Console.Clear();
-
+        Console.WriteLine("yo mama");
         map.Initialize();
 
         PlaceGameObjects();
