@@ -40,6 +40,9 @@ public sealed class InputHandler{
                 case ConsoleKey.RightArrow:
                     focusedObject.Move(1, 0);
                     break;
+                // Adding the button for rewinding
+                // case ConsoleKey.Z:
+                //     focusedObject.
                 default:
                     break;
             }
