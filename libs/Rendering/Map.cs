@@ -8,11 +8,15 @@ public class Map {
     private int _mapWidth;
     private int _mapHeight;
 
+    public GameObject?[,] mapArray;
+
+
     public Map () {
         _mapWidth = 30;
         _mapHeight = 8;
         RepresentationalLayer = new char[_mapHeight, _mapWidth];
         GameObjectLayer = new GameObject[_mapHeight, _mapWidth];
+        mapArray = new GameObjectLayer[_mapWidth, _mapHeight];
     }
 
     public Map (int width, int height) {
@@ -20,6 +24,15 @@ public class Map {
         _mapHeight = height;
         RepresentationalLayer = new char[_mapHeight, _mapWidth];
         GameObjectLayer = new GameObject[_mapHeight, _mapWidth];
+        mapArray = new GameObject[_mapWidth, _mapHeight];
+    }
+
+    public void saveMap(){
+        for (int x = 0; x < _mapWidth; x++){
+            for (int y = 0; y < _mapHeight; y++){
+                mapArray[x, y] = map.get(x, y);
+            }
+        }
     }
 
     public void Initialize()

@@ -80,6 +80,7 @@ public sealed class GameEngine
 
         PlaceGameObjects();
 
+        map.saveMap();
 
         //Render the map
         for (int i = 0; i < map.MapHeight; i++)
