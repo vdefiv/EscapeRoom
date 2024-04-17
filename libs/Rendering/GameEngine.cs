@@ -10,6 +10,7 @@ public sealed class GameEngine
 {
     private static GameEngine? _instance;
     public IGameObjectFactory gameObjectFactory;
+    public int AmountOfBoxes = 0;
 
     public static GameEngine Instance {
         get{
@@ -41,6 +42,14 @@ public sealed class GameEngine
         return _focusedObject;
     }
 
+    public bool endGame(){
+        if(AmountOfBoxes == 0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     public void Setup(){
 
         //Added for proper display of game characters
@@ -55,6 +64,8 @@ public sealed class GameEngine
         {
             AddGameObject(CreateGameObject(gameObject));
         }
+
+        // AmountOfBoxes = gameObjectFactory.GetAmountOfBoxes;
         
         _focusedObject = gameObjects.OfType<Player>().First();
 
@@ -68,6 +79,7 @@ public sealed class GameEngine
         map.Initialize();
 
         PlaceGameObjects();
+
 
         //Render the map
         for (int i = 0; i < map.MapHeight; i++)
@@ -90,9 +102,10 @@ public sealed class GameEngine
 {
     if (gameObject.Type == GameObjectType.Box)
     {
-        int currentAmountOfBoxes = gameObjectFactory.AmountOfBoxes;
-        currentAmountOfBoxes++;
-        ((GameObjectFactory)gameObjectFactory).SetAmountOfBoxes(currentAmountOfBoxes);
+        // int currentAmountOfBoxes = gameObjectFactory.AmountOfBoxes;
+        // currentAmountOfBoxes++;
+        // ((GameObjectFactory)gameObjectFactory).SetAmountOfBoxes(currentAmountOfBoxes);
+        AmountOfBoxes++;
     }
     gameObjects.Add(gameObject);
 }

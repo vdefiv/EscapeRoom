@@ -3,12 +3,12 @@ namespace libs;
 public class Box : GameObject {
     
     private GameObjectFactory gameObjectFactory;
-    private int targetsLeft;
-
+    // private int targetsLeft;
+ 
     public Map map = GameEngine.Instance.GetMap();
     public Box () : base(){
         this.gameObjectFactory = (GameEngine.Instance.gameObjectFactory as GameObjectFactory);
-        this.targetsLeft = gameObjectFactory.AmountOfBoxes;
+        // this.targetsLeft = gameObjectFactory.AmountOfBoxes;
             Type = GameObjectType.Player;
             CharRepresentation = '○';
             Color = ConsoleColor.DarkGreen;
@@ -16,6 +16,8 @@ public class Box : GameObject {
     
 
     public override void Move(int dx, int dy) {
+        var engine = GameEngine.Instance;
+
         bool touched = false;
         int  goToX = PosX +dx;
         int  goToY = PosY +dy;
@@ -29,30 +31,10 @@ public class Box : GameObject {
         GameObject? PotentialTarget = map.Get(goToY, goToX);
         
         if(PotentialTarget.Type == GameObjectType.Target){
+
             Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            Console.WriteLine ("touched the target");
-            targetsLeft--;
-            Console.WriteLine (targetsLeft);
-            if(targetsLeft == 1){
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-            Console.WriteLine ("You won the game");
-        }
+            engine.AmountOfBoxes--;
+
         }
 
     }

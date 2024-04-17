@@ -42,7 +42,11 @@ public class Player : GameObject {
             || NextObject.Type == GameObjectType.Box) return;
 
             PotentialBox.Move(dx,dy);
+            if(NextObject.Type == GameObjectType.Target){
             PotentialBox.Color = ConsoleColor.Red;
+            }else{
+                PotentialBox.Color = ConsoleColor.Yellow;
+            }
         }
 
         this.SetPrevPosY(this.PosY);
