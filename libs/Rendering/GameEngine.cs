@@ -11,7 +11,8 @@ public sealed class GameEngine
     private static GameEngine? _instance;
     public IGameObjectFactory gameObjectFactory;
 
-    public int currentLevel = 3;
+    // Current level when we start is 1
+    public int currentLevel = 1;
 
     public static GameEngine Instance
     {
@@ -48,6 +49,9 @@ public sealed class GameEngine
         return _focusedObject;
     }
 
+    // Fixed Bug:
+    // Checked endGame() by comparing the amount of Box/Target collisions to the amount of Targets.
+    // Removed AmountOfBoxes variable everywhere, because it's not needed anymore.
     public bool endGame()
     {
         var Targets = gameObjects.OfType<Target>();
@@ -73,6 +77,7 @@ public sealed class GameEngine
 
         dynamic gameData = FileHandler.ReadJson();
 
+        // First level gets loaded at beginning
         var Level = gameData.First;
 
         switch (currentLevel)
@@ -90,7 +95,7 @@ public sealed class GameEngine
                 return;
         }
 
-        gameObjects.Clear();
+        gameObjects.Clear(); // clear all objects before rendering new level
         map.MapWidth = gameData.map.width;
         map.MapHeight = gameData.map.height;
 
@@ -122,7 +127,8 @@ public sealed class GameEngine
             Console.WriteLine();
         }
 
-        if (endGame() == false && currentLevel != 3)
+        // Checks if the current level is anything but the last
+        if (endGame() == false && currentLevel != 3) 
         {
             Console.WriteLine("You completed the level!");
             Console.WriteLine("Press Enter to get to the next level!");

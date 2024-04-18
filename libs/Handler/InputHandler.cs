@@ -45,10 +45,11 @@ public sealed class InputHandler
                 case ConsoleKey.RightArrow:
                     focusedObject.Move(1, 0);
                     break;
+                // Key for undoing one step
                 case ConsoleKey.Z:
                     engine.Undo();
                     break;
-                // Adding the button for next level
+                // Key for loading next level if it exists
                 case ConsoleKey.Enter:
                     engine.TryLoadNextLevel();
                     break;
