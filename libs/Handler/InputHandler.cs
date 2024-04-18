@@ -1,13 +1,16 @@
 namespace libs;
 
-public sealed class InputHandler{
+public sealed class InputHandler
+{
 
     private static InputHandler? _instance;
     private GameEngine engine;
 
-    public static InputHandler Instance {
-        get{
-            if(_instance == null)
+    public static InputHandler Instance
+    {
+        get
+        {
+            if (_instance == null)
             {
                 _instance = new InputHandler();
             }
@@ -15,7 +18,8 @@ public sealed class InputHandler{
         }
     }
 
-    private InputHandler() {
+    private InputHandler()
+    {
         //INIT PROPS HERE IF NEEDED
         engine = GameEngine.Instance;
     }
@@ -24,7 +28,8 @@ public sealed class InputHandler{
     {
         GameObject focusedObject = engine.GetFocusedObject();
 
-        if (focusedObject != null) {
+        if (focusedObject != null)
+        {
             // Handle keyboard input to move the player
             switch (keyInfo.Key)
             {
@@ -44,14 +49,12 @@ public sealed class InputHandler{
                     engine.Undo();
                     break;
                 // Adding the button for next level
-                // case ConsoleKey.Enter:
-                //     --Function for switching to next level
-                //     break;
+                case ConsoleKey.Enter:
+                    engine.TryLoadNextLevel();
+                    break;
                 default:
                     break;
             }
-            
         }
-        
     }
 }

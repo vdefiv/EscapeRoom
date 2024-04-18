@@ -31,8 +31,6 @@ public class Box : GameObject {
         GameObject? PotentialTarget = map.Get(goToY, goToX);
         
         if(PotentialTarget.Type == GameObjectType.Target){
-            Console.WriteLine ("You completed the level!");
-            Console.WriteLine ("Press Enter to get to the next level!");
             engine.AmountOfBoxes--;
         }
 
