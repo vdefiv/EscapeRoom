@@ -11,7 +11,7 @@ public sealed class GameEngine
     private static GameEngine? _instance;
     public IGameObjectFactory gameObjectFactory;
 
-    public int currentLevel = 1;
+    public int currentLevel = 3;
 
     public static GameEngine Instance
     {
@@ -68,7 +68,7 @@ public sealed class GameEngine
 
     public void Setup()
     {
-        //Added for proper display of game characters
+        // Added for proper display of game characters
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
         dynamic gameData = FileHandler.ReadJson();
@@ -86,6 +86,8 @@ public sealed class GameEngine
             case (3):
                 Level = gameData.Third;
                 break;
+            default: 
+                return;
         }
 
         gameObjects.Clear();
@@ -120,7 +122,7 @@ public sealed class GameEngine
             Console.WriteLine();
         }
 
-        if (endGame() == false)
+        if (endGame() == false && currentLevel != 3)
         {
             Console.WriteLine("You completed the level!");
             Console.WriteLine("Press Enter to get to the next level!");

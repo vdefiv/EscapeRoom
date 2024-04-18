@@ -2,11 +2,6 @@ namespace libs;
 
 public class GameObjectFactory : IGameObjectFactory
 {
-
-    private int amountOfBoxes = 0;
-
-    public int GetAmountOfBoxes { get => amountOfBoxes; }
-
     public GameObject CreateGameObject(dynamic obj)
     {
 
@@ -25,7 +20,6 @@ public class GameObjectFactory : IGameObjectFactory
                 break;
             case (int)GameObjectType.Box:
                 newObj = obj.ToObject<Box>();
-                amountOfBoxes++;
                 break;
             case (int)GameObjectType.Target:
                 newObj = obj.ToObject<Target>();
@@ -33,9 +27,5 @@ public class GameObjectFactory : IGameObjectFactory
         }
 
         return newObj;
-    }
-    public void SetAmountOfBoxes(int amount)
-    {
-        amountOfBoxes = amount;
     }
 }

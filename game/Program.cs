@@ -19,6 +19,11 @@ class Program
             // Handle keyboard input
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             inputHandler.Handle(keyInfo);
+            if (engine.currentLevel == 3 && engine.endGame() == false) {
+                engine.Render();
+                Console.WriteLine("Game finished. All levels mastered!");
+                break;
+            } 
         }
     }
 }
