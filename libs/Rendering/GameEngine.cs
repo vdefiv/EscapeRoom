@@ -10,7 +10,6 @@ public sealed class GameEngine
 {
     private static GameEngine? _instance;
     public IGameObjectFactory gameObjectFactory;
-    public int AmountOfBoxes = 0;
 
     public int currentLevel = 1;
 
@@ -51,14 +50,20 @@ public sealed class GameEngine
 
     public bool endGame()
     {
-        if (AmountOfBoxes == 0)
+        var Targets = gameObjects.OfType<Target>();
+        var Boxes = gameObjects.OfType<Box>();
+        int Hits = 0;
+
+        foreach (var Target in Targets)
         {
-            return false;
+            foreach (var Box in Boxes)
+            {
+                if (Box.PosX == Target.PosX && Box.PosY == Target.PosY) {
+                    Hits++;
+                }   
+            }
         }
-        else
-        {
-            return true;
-        }
+        return (Hits != Targets.Count());
     }
 
     public void Setup()
@@ -115,9 +120,10 @@ public sealed class GameEngine
             Console.WriteLine();
         }
 
-        if (endGame() == false) {
-            Console.WriteLine ("You completed the level!");
-            Console.WriteLine ("Press Enter to get to the next level!");
+        if (endGame() == false)
+        {
+            Console.WriteLine("You completed the level!");
+            Console.WriteLine("Press Enter to get to the next level!");
         }
     }
 
@@ -139,10 +145,6 @@ public sealed class GameEngine
 
     public void AddGameObject(GameObject gameObject)
     {
-        if (gameObject.Type == GameObjectType.Box)
-        {
-            AmountOfBoxes++;
-        }
         gameObjects.Add(gameObject);
     }
 
