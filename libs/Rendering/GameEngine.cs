@@ -74,25 +74,28 @@ public sealed class GameEngine
     {
         // Added for proper display of game characters
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-
+        Console.WriteLine("issue isnt here");
         dynamic gameData = FileHandler.ReadJson();
-
         // First level gets loaded at beginning
+        
         var Level = gameData.First;
-
-        switch (currentLevel)
+        if (!FileHandler.LoadSavedGame)
         {
+            switch (currentLevel)
+            {
             case (1):
-                Level = gameData.First;
-                break;
-            case (2):
-                Level = gameData.Second;
-                break;
-            case (3):
-                Level = gameData.Third;
-                break;
-            default: 
-                return;
+                    Level = gameData.First;
+                    break;
+                case (2):
+                    Level = gameData.Second;
+                    break;
+                case (3):
+                    Level = gameData.Third;
+                    break;
+                default: 
+                    return;
+            }
+            
         }
 
         gameObjects.Clear(); // clear all objects before rendering new level
@@ -135,9 +138,32 @@ public sealed class GameEngine
         }
     }
 
+    public void SaveMap(){
+    List<GameObject> savedMap = new List<GameObject>();
+
+        for (int i = 0; i < map.MapHeight; i++)
+        {
+            for (int j = 0; j < map.MapWidth; j++)
+            {
+                GameObject currentObject = map.Get(i, j);
+                if (currentObject != null && currentObject.Type != GameObjectType.Floor)
+                {
+                    savedMap.Add(currentObject);
+                }
+            }
+        }
+        FileHandler.SaveJson(savedMap);
+    }
+
+    public void loadSavedGame(){
+        FileHandler.LoadSavedGame = true;
+        Setup();
+    }
+
     public void Undo()
     {
         // Only step back possible
+        //TODO: fix bug where the box will still go to prev position even if it didnt move in current move
         foreach (var gameObject in gameObjects)
         {
             gameObject.PosX = gameObject.GetPrevPosX();

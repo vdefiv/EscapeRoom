@@ -53,6 +53,15 @@ public sealed class InputHandler
                 case ConsoleKey.Enter:
                     engine.TryLoadNextLevel();
                     break;
+
+                case ConsoleKey.S:
+                    engine.SaveMap();
+                    break;
+
+                case ConsoleKey.L:
+                    engine.loadSavedGame();
+                    break;
+
                 default:
                     break;
             }

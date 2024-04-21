@@ -73,19 +73,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mila2\\.nuget\\packages\\": {}
+    "C:\\Users\\hesha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\game.csproj",
+      "projectUniqueName": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj",
       "projectName": "game",
-      "projectPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\game.csproj",
-      "packagesPath": "C:\\Users\\mila2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\obj\\",
+      "projectPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\game.csproj",
+      "packagesPath": "C:\\Users\\hesha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mila2\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\hesha\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -97,8 +97,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj": {
-              "projectPath": "C:\\Users\\mila2\\Downloads\\SokobanGame\\libs\\libs.csproj"
+            "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj": {
+              "projectPath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\SokobanGame\\libs\\libs.csproj"
             }
           }
         }
@@ -133,16 +133,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\mila2\\Downloads\\SokobanGame\\game\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
