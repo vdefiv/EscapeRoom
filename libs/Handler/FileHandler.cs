@@ -10,25 +10,16 @@ public static class FileHandler
     private readonly static string envVar = "GAME_SETUP_PATH";
     private readonly static string envVar_Saved = "GAME_SAVE_PATH";
 
-    private static bool loadSavedGameBool = false;
-    public static bool LoadSavedGame
-    {
-        get { return loadSavedGameBool; }
-        set { loadSavedGameBool = value; }
-    }
-    
     static FileHandler()
     {
-        Initialize();
+        Initialize(false);
     }
 
-    private static void Initialize()
+    private static void Initialize(bool loadSavedGameBool)
     {
-        
         if(loadSavedGameBool){
             if(Environment.GetEnvironmentVariable(envVar_Saved) != null){
             filePath = Environment.GetEnvironmentVariable(envVar_Saved);
-            loadSavedGameBool = false;
             Console.WriteLine("Loading saved game");
             }
         }else{
@@ -39,9 +30,9 @@ public static class FileHandler
         }
     }
 
-    public static dynamic ReadJson()
+    public static dynamic ReadJson(bool SavedGame)
     {
-        Initialize();
+        Initialize(SavedGame);
         if (string.IsNullOrEmpty(filePath))
         {
             throw new InvalidOperationException("JSON file path not provided in environment variable");
@@ -65,7 +56,7 @@ public static class FileHandler
 
 
 
-    public static void SaveJson(List<GameObject> gameObjects)
+    public static void SaveJson(List<GameObject> gameObjects, int currentLevel)
     {
         File.WriteAllText("SavedGame.json", string.Empty);
         var jsonData = new
@@ -78,7 +69,8 @@ public static class FileHandler
             First = new
             {
                 gameObjects = gameObjects.OrderBy(obj => obj.Type == 0 ? 1 : 0).ToList()
-            }
+            },
+            Level = currentLevel
         };
 
         try

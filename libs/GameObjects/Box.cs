@@ -19,7 +19,6 @@ public class Box : GameObject
     {
         var engine = GameEngine.Instance;
 
-        bool touched = false;
         int goToX = PosX + dx;
         int goToY = PosY + dy;
 

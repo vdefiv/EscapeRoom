@@ -8,7 +8,7 @@ class Program
         Console.CursorVisible = false;
         var engine = GameEngine.Instance;
         var inputHandler = InputHandler.Instance;
-        engine.Setup();
+        engine.Setup(false);
 
         // Main game loop
         while (true)

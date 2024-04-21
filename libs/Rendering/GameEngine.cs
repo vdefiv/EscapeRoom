@@ -70,16 +70,16 @@ public sealed class GameEngine
         return (Hits != Targets.Count());
     }
 
-    public void Setup()
+    public void Setup(bool SavedGame)
     {
         // Added for proper display of game characters
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         Console.WriteLine("issue isnt here");
-        dynamic gameData = FileHandler.ReadJson();
+        dynamic gameData = FileHandler.ReadJson(SavedGame);
         // First level gets loaded at beginning
         
         var Level = gameData.First;
-        if (!FileHandler.LoadSavedGame)
+        if (!SavedGame)
         {
             switch (currentLevel)
             {
@@ -101,6 +101,12 @@ public sealed class GameEngine
         gameObjects.Clear(); // clear all objects before rendering new level
         map.MapWidth = gameData.map.width;
         map.MapHeight = gameData.map.height;
+
+        int? level_from_json = gameData.Level;
+        if (level_from_json.HasValue)
+        {
+            currentLevel = level_from_json.Value;
+        }
 
         foreach (var gameObject in Level.gameObjects)
         {
@@ -152,12 +158,11 @@ public sealed class GameEngine
                 }
             }
         }
-        FileHandler.SaveJson(savedMap);
+        FileHandler.SaveJson(savedMap, currentLevel);
     }
 
     public void loadSavedGame(){
-        FileHandler.LoadSavedGame = true;
-        Setup();
+        Setup(true);
     }
 
     public void Undo()
@@ -212,7 +217,7 @@ public sealed class GameEngine
         if ((endGame() == false) && (currentLevel < 3))
         {
             currentLevel++;
-            Setup();
+            Setup(false);
         }
     }
 }
