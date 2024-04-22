@@ -8,11 +8,11 @@ class Program
         Console.CursorVisible = false;
         var engine = GameEngine.Instance;
         var inputHandler = InputHandler.Instance;
-        
+        var game = true;
         engine.Setup();
 
         // Main game loop
-        while (true)
+        while (engine.endGame())
         {
             engine.Render();
 

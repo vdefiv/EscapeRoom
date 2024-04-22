@@ -5,7 +5,7 @@ public class GameObjectFactory : IGameObjectFactory
     
     private int amountOfBoxes = 0;
 
-    public int AmountOfBoxes { get => amountOfBoxes; }
+    public int GetAmountOfBoxes { get => amountOfBoxes; }
 
     public GameObject CreateGameObject(dynamic obj) {
 

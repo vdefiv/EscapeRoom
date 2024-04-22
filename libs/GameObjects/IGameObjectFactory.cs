@@ -4,5 +4,5 @@ public interface IGameObjectFactory
 {
     public GameObject CreateGameObject(dynamic obj);
     
-    public int AmountOfBoxes { get; }
+    public int GetAmountOfBoxes { get; }
 };
