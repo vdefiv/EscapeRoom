@@ -18,11 +18,19 @@ class Program
             // Handle keyboard input
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             inputHandler.Handle(keyInfo);
+
             // Checks if it's the last level
-            if (engine.currentLevel == 3 && engine.endGame() == false)
+            // if (engine.currentLevel == 3 && engine.endGame() == false)
+            // {
+            //     engine.Render();
+            //     Console.WriteLine("Game finished. All levels mastered!");
+            //     break;
+            // }
+
+            if (engine.endGame() == false)
             {
                 engine.Render();
-                Console.WriteLine("Game finished. All levels mastered!");
+                Console.WriteLine("You escaped!");
                 break;
             }
         }

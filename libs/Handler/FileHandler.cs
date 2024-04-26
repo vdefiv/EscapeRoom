@@ -63,8 +63,8 @@ public static class FileHandler
         {
             map = new
             {
-                width = 10,
-                height = 8
+                width = 16,
+                height = 12
             },
             First = new
             {

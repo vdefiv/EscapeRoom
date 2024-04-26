@@ -18,11 +18,17 @@ public class GameObjectFactory : IGameObjectFactory
             case (int)GameObjectType.Obstacle:
                 newObj = obj.ToObject<Obstacle>();
                 break;
-            case (int)GameObjectType.Box:
-                newObj = obj.ToObject<Box>();
+            case (int)GameObjectType.Key:
+                newObj = obj.ToObject<Key>();
                 break;
             case (int)GameObjectType.Target:
                 newObj = obj.ToObject<Target>();
+                break;
+            case (int)GameObjectType.Infopoint:
+                newObj = obj.ToObject<Infopoint>();
+                break;
+            case (int)GameObjectType.NPC:
+                newObj = obj.ToObject<NPC>();
                 break;
         }
 

@@ -50,9 +50,9 @@ public sealed class InputHandler
                     engine.Undo();
                     break;
                 // Key for loading next level if it exists
-                case ConsoleKey.Enter:
-                    engine.TryLoadNextLevel();
-                    break;
+                // case ConsoleKey.Enter:
+                //     engine.TryLoadNextLevel();
+                //     break;
 
                 case ConsoleKey.S:
                     engine.SaveMap();
