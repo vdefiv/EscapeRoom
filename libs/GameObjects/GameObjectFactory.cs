@@ -18,8 +18,8 @@ public class GameObjectFactory : IGameObjectFactory
             case (int)GameObjectType.Obstacle:
                 newObj = obj.ToObject<Obstacle>();
                 break;
-            case (int)GameObjectType.Key:
-                newObj = obj.ToObject<Key>();
+            case (int)GameObjectType.Box:
+                newObj = obj.ToObject<Box>();
                 break;
             case (int)GameObjectType.Target:
                 newObj = obj.ToObject<Target>();
