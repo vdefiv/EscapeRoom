@@ -3,7 +3,6 @@ namespace libs;
 public class Player : GameObject
 {
     private static Player instance = null;
-    private int Rotation; 
 
     public Map map = GameEngine.Instance.GetMap();
 
@@ -12,7 +11,6 @@ public class Player : GameObject
         Type = GameObjectType.Player;
         CharRepresentation = '☻';
         Color = ConsoleColor.DarkYellow;
-        Rotation = 0;
     }
 
     public static Player Instance
@@ -25,7 +23,6 @@ public class Player : GameObject
             }
             return instance;
         }
-
         set { }
     }
 
@@ -65,28 +62,23 @@ public class Player : GameObject
         this.PosY += dy;
     }
 
-    public virtual int Rotate(int dx, int dy)
+    public virtual void Rotate(int dx, int dy)
     {
         if (this.GetPrevPosX() > this.PosX)
         {
             this.CharRepresentation = 'L';
-            return Rotation = 0;
         }
         else if (GetPrevPosX() < this.PosX)
         {
             this.CharRepresentation = 'R';
-            return Rotation = 1;
         }
         else if (GetPrevPosY() < this.PosY)
         {
             this.CharRepresentation = 'D';
-            return Rotation = 2;
         }
         else if (GetPrevPosY() > this.PosY)
         {
             this.CharRepresentation = 'U';
-            return Rotation = 3;
         }
-        return;
     }
 }

@@ -34,28 +34,16 @@ public sealed class InputHandler
             switch (keyInfo.Key)
             {
                 case ConsoleKey.UpArrow:
-                    if (focusedObject.Rotate == 1)
-                    {
-                        focusedObject.Move(0, -1);
-                    }
+                    focusedObject.Move(0, -1);
                     break;
                 case ConsoleKey.DownArrow:
-                    if (focusedObject.Rotate == 2)
-                    {
-                        focusedObject.Move(0, 1);
-                    }
+                    focusedObject.Move(0, 1);
                     break;
                 case ConsoleKey.LeftArrow:
-                    if (focusedObject.Rotate == 3)
-                    {
-                        focusedObject.Move(-1, 0);
-                    }
+                    focusedObject.Move(-1, 0);
                     break;
                 case ConsoleKey.RightArrow:
-                    if (focusedObject.Rotate == 4)
-                    {
-                        focusedObject.Move(1, 0);
-                    }
+                    focusedObject.Move(1, 0);
                     break;
                 // Key for undoing one step
                 case ConsoleKey.Z:
