@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kF8qmECn5rxNE1wcQw/gzWPSNpNasztyVZHvspLvm22uGSc0PuJ2HMMlBOfpp7FooKR4CM0+oaeoL/gvQR3e9g==",
+  "dgSpecHash": "Ag5od/jv8R71C83En3l2pQmY5dFIAmLJgI1Zjqft/zOri2mWpSyeJBoueKuZkCT5mG7en9eTS3QQCK3ETbnCMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Desktop\\UNI\\C#\\EscapeRoom\\EscapeRoom\\game\\game.csproj",
+  "projectFilePath": "C:\\Users\\hesha\\OneDrive\\St polten Assignments\\Yr2. Second Semester\\C# development\\ChessEngine\\EscapeRoom\\game\\game.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\andre\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\hesha\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

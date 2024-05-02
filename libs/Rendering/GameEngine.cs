@@ -86,12 +86,12 @@ public sealed class GameEngine
             case (1):
                     Level = gameData.First;
                     break;
-                case (2):
-                    Level = gameData.Second;
-                    break;
-                case (3):
-                    Level = gameData.Third;
-                    break;
+                // case (2):
+                //     Level = gameData.Second;
+                //     break;
+                // case (3):
+                //     Level = gameData.Third;
+                //     break;
                 default: 
                     return;
             }
@@ -137,11 +137,11 @@ public sealed class GameEngine
         }
 
         // Checks if the current level is anything but the last
-        if (endGame() == false && currentLevel != 3) 
-        {
-            Console.WriteLine("You completed the level!");
-            Console.WriteLine("Press Enter to get to the next level!");
-        }
+        // if (endGame() == false && currentLevel != 3) 
+        // {
+        //     Console.WriteLine("You completed the level!");
+        //     Console.WriteLine("Press Enter to get to the next level!");
+        // }
     }
 
     public void SaveMap(){
@@ -212,12 +212,12 @@ public sealed class GameEngine
     }
 
     // Increase currentLevel if Level is finished and next Level exists  
-    public void TryLoadNextLevel()
-    {
-        if ((endGame() == false) && (currentLevel < 3))
-        {
-            currentLevel++;
-            Setup(false);
-        }
-    }
+    // public void TryLoadNextLevel()
+    // {
+    //     if ((endGame() == false) && (currentLevel < 3))
+    //     {
+    //         currentLevel++;
+    //         Setup(false);
+    //     }
+    // }
 }
