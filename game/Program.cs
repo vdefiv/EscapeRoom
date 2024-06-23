@@ -8,17 +8,16 @@ class Program
     {
         //Setup
         Console.CursorVisible = false;
-         Stopwatch gameTimer;
-         TimeSpan gameDuration;
-        gameTimer = new Stopwatch();
-        gameDuration = TimeSpan.FromSeconds(20);
+         Stopwatch gameTimer = new Stopwatch();
+         TimeSpan gameDuration = TimeSpan.FromSeconds(20);
+        var runGame = true;
         var engine = GameEngine.Instance;
         var inputHandler = InputHandler.Instance;
         engine.Setup(false);
         // Timer
        
         // Main game loop
-        while (true)
+        while (runGame)
         {
             Console.Clear();
             if (!gameTimer.IsRunning)
@@ -31,16 +30,18 @@ class Program
             {
                 // Stop the game
                 gameTimer.Stop();
-                Console.WriteLine("Game over!");
-                return;
+                Console.WriteLine("Game over! Time Ended;");
+                runGame =false;
+              
             }
 
             // Calculate the remaining time and display it
             TimeSpan remainingTime = gameDuration - gameTimer.Elapsed;
-            Console.WriteLine($"Time remaining: {remainingTime.TotalSeconds} seconds");
 
 
             engine.Render();
+            Console.WriteLine($"Time remaining: {remainingTime.TotalSeconds} seconds");
+
 
 
             if (Console.KeyAvailable)
@@ -61,10 +62,10 @@ class Program
             {
                 engine.Render();
                 Console.WriteLine("You escaped!");
-                break;
+                runGame = false;
             }
                 // Add a delay of 1 second
-    Thread.Sleep(50);
+            Thread.Sleep(10);
 
         }
         // Main game loop

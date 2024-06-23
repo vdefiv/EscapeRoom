@@ -36,7 +36,7 @@ public sealed class GameEngine
 
     private Map map = new Map();
 
-    private List<GameObject> gameObjects = new List<GameObject>();
+    public static List<GameObject> gameObjects = new List<GameObject>();
 
 
     public Map GetMap()
@@ -48,6 +48,7 @@ public sealed class GameEngine
     {
         return _focusedObject;
     }
+    
 
     // Fixed Bug:
     // Checked endGame() by comparing the amount of Box/Target collisions to the amount of Targets.

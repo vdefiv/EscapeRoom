@@ -17,8 +17,6 @@ public class Box : GameObject
 
     public override void Move(int dx, int dy)
     {
-        var engine = GameEngine.Instance;
-
         int goToX = PosX + dx;
         int goToY = PosY + dy;
 

@@ -62,6 +62,10 @@ public sealed class InputHandler
                     engine.loadSavedGame();
                     break;
 
+                case ConsoleKey.R:
+                    engine.Setup(false);
+                    break;
+
                 default:
                     break;
             }
